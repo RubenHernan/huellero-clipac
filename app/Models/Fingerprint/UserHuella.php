@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Huellero;
+namespace App\Models\Fingerprint;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

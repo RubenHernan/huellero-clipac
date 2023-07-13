@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
-            $table->integer('cod_usuario');
+            $table->integer('cod_usuario')->nullable();
             $table->string('nombres');
             $table->string('apellidos');
+            $table->string('nro_doc',50);
             $table->binary('imagen')->nullable();
             $table->timestamps();
         });
