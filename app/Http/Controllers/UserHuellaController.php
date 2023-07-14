@@ -73,4 +73,21 @@ class UserHuellaController extends Controller
         }
         return response(['success' => false, 'message' => 'Ocurrió un error...', 'huella' => false]);
     }
+
+    public function close ($cod){
+        $findUser = UserHuella::where('cod_usuario',$cod)->first();
+
+        if($findUser) {
+            $findUser->cod_usuario = 0;
+            $findUser->nombres = "PACIENTE";
+            $findUser->apellidos= "TEMP";
+            $findUser->nro_doc= null;
+            $findUser->huella = null;
+            $findUser->save();
+
+            return response(['success' => true, 'message' => 'Paciente limpiado']);
+        }
+
+        return response(['success' => false, 'message' => 'Paciente no se encontró']);
+    }
 }

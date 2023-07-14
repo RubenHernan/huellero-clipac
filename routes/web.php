@@ -18,3 +18,4 @@ $router->get('/', function () use ($router) {
 });
 
 $router->post('/verify', 'UserHuellaController@verify');
+$router->put('/close/{cod}', 'UserHuellaController@close');

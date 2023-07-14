@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('nombres');
             $table->string('apellidos');
             $table->string('nro_doc',50);
-            $table->binary('imagen')->nullable();
+            $table->mediumBinary('huella')->nullable();
             $table->timestamps();
         });
     }
