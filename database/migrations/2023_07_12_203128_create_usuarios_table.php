@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('nombres');
             $table->string('apellidos');
             $table->string('nro_doc',50);
-            $table->mediumBinary('huella')->nullable();
+            $table->binary('huella')->nullable();//cambiar a mediumblob
+            $table->binary('firma')->nullable();//cambiar a mediumblob
             $table->timestamps();
         });
     }
